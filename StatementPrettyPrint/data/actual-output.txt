@@ -1,0 +1,7 @@
+  IF next-is-not-enemy THEN
+      turnleft
+      turnright
+      skip-again
+      turnright
+      turnleft
+  END IF
