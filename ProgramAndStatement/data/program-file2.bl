@@ -1,0 +1,20 @@
+PROGRAM TestTwo IS
+
+  INSTRUCTION one IS
+     move
+     infect
+     turnright
+  END one
+  
+  INSTRUCTION two IS
+    move
+    move
+    turnleft
+  END two
+
+BEGIN
+  WHILE random DO
+    one
+    two
+  END WHILE
+END TestTwo

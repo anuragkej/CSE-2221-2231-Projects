@@ -1,0 +1,34 @@
+PROGRAM TestFive IS
+
+        INSTRUCTION Five IS
+            WHILE next-is-friend DO
+                turnright
+                turnright
+                move
+            END WHILE
+            IF next-is-not-wall THEN
+                move
+                move
+            ELSE
+                turnleft
+                WHILE random DO
+                    infect
+                    move
+                END WHILE
+            END IF
+        END Five
+
+    BEGIN
+        WHILE true DO
+            Five
+            IF next-is-enemy THEN
+                infect
+            ELSE
+                IF next-is-wall THEN
+                    turnleft
+                ELSE
+                    skip
+                END IF
+            END IF
+        END WHILE
+END TestFive

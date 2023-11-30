@@ -1,0 +1,31 @@
+PROGRAM TestThree IS
+
+  INSTRUCTION one IS
+     turnright
+     turnright
+     move
+     IF next-is-enemy THEN
+        infect
+     END IF
+     turnleft
+  END one
+  
+  INSTRUCTION two IS
+    move
+    turnleft
+    move
+    move
+  END two
+
+BEGIN
+  WHILE random DO
+    one
+    two
+    IF next-is-not-enemy THEN
+        move
+    ELSE
+        infect
+        turnright
+    END IF
+  END WHILE
+END TestThree
